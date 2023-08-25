@@ -57,7 +57,7 @@ func (h *TokenHandler) refresh() fiber.Handler {
 }
 
 func (h *TokenHandler) Register(r fiber.Router) {
-	r.Post("create-tokens/:userID",
+	r.Get("create-tokens/:userID",
 		h.create())
 	r.Post("refresh-tokens",
 		h.refresh())
